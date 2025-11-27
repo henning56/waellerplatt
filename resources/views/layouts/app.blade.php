@@ -103,7 +103,7 @@
     </main>
 
     <footer class="container" style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--muted-color);">
-        <small>Wäller Platt &copy; {{ date('Y') }}</small>
+        <small>Wäller Platt &copy; {{ date('Y') }} ~ <a href="{{ route('impressum') }}">Impressum</a> ~ <a href="{{ route('datenschutz') }}">Datenschutz</a> ~ <a href="https://de.wikipedia.org/wiki/W%C3%A4ller_Platt" target="_blank">Wällerplatt - Wikipedia</a></small>
     </footer>
 </body>
-</html>up
+</html>

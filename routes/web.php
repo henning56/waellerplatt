@@ -19,7 +19,10 @@ Route::get('/aussprache', function () {
     return view('aussprache');})->name('aussprache');
 Route::get('/weisheiten', function () {
     return view('weisheiten');})->name('weisheiten');
-
+Route::get('/impressum', function () {
+    return view('impressum');})->name('impressum');
+Route::get('/datenschutz', function () {
+    return view('datenschutz');})->name('datenschutz');
 
 Route::get('/check-columns', function() {
     $tableName = 'dialect_expressions'; // Ersetze mit dem tatsächlichen Tabellennamen
