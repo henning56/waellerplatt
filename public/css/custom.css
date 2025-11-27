@@ -1,0 +1,451 @@
+/* Custom Styles für Dialekt-Lexikon */
+:root {
+    --primary: #4a90e2;
+    --secondary: #50e3c2;
+    --ins-color: #7ed321;
+    --del-color: #d0021b;
+    --navi-color: #f9f9f9;
+    --body-background-color: #f9f9f9;
+    --body-text-color: #333333;
+    --h1-color: #222222;
+    --card-background-color: #ffffff;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --color: #333333;
+    --muted-color: #777777;
+}
+/* Success Messages */
+.alert-success {
+    background: var(--ins-color);
+    color: var(--color);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+/* Table Actions */
+.table-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Form Spacing */
+.form-spacing {
+    margin-bottom: 1.5rem;
+}
+
+/*Logo Herborn */
+.logoherborn {
+    height: 80px;
+    width: auto;
+    margin-left:4rem
+}
+/* Responsive Tables - Flexbox Solution */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        font-size: 0.875rem;
+    }
+    
+    table thead {
+        display: none;
+    }
+    
+    table tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    table tbody tr {
+        display: flex;
+        flex-direction: column;
+        background: var(--card-background-color);
+        border: 1px solid var(--muted-color);
+        border-radius: 8px;
+        padding: 1.25rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    
+    table tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid color-mix(in srgb, var(--muted-color) 15%, transparent);
+    }
+    
+    table tbody td:before {
+        /* content: attr(data-label); */
+        font-weight: bold;
+        color: var(--primary);
+        flex: 0 0 45%;
+        padding-right: 1rem;
+    }
+    
+    table tbody td .cell-content {
+        flex: 0 0 55%;
+        text-align: right;
+    }
+    
+    /* Letzte Zeile ohne Border */
+    table tbody td:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    
+    table tbody td:first-child {
+        padding-top: 0;
+    }
+    
+    /* Spezielle Behandlung für Aktionen */
+    .table-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .table-actions a,
+    .table-actions button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Custom Body Styles */
+nav{
+    background: var(--muted-color);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    
+}
+
+nav.oben { min-height:12rem;
+    position: relative;
+    padding-left: 0 !important;
+    background-image: url('/images/ort2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+
+nav div#content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+}
+details.dropdown[open] > summary + ul {
+    background-color:var(--secondary);
+}
+details.dropdown > summary + ul li a:hover, details.dropdown > summary + ul li a:focus, details.dropdown > summary + ul li a:active, details.dropdown > summary + ul li a:focus-visible, details.dropdown > summary + ul li a[aria-current]:not([aria-current=false]) {
+  background-color: var(--muted-color);
+}
+div.pag * {background-image:none}
+
+nav ul , nav ul li a{
+    color: var(--navi-color) !important;
+    font-weight: bold;
+}
+
+/* Custom Header Styles */
+h1 {
+    color: var(--h1-color);
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--muted-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Card-like elements */
+.card {
+    background: var(--card-background-color);
+    border: 1px solid var(--muted-color);
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Button enhancements */
+button[type="submit"].danger {
+    background: var(--del-color);
+    border-color: var(--del-color);
+}
+
+button[type="submit"].danger:hover {
+    opacity: 0.9;
+}
+/* Custom Styles für Dialekt-Lexikon */
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    /* padding: 2rem; */
+    border-radius: 8px;
+    /* margin-bottom: 2rem; */
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    /* margin-bottom: 1.5rem; */
+    opacity: 0.9;
+}
+
+.hero-button {
+    background: white;
+    color: var(--primary);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+}
+
+/* Content Sections */
+.content-section {
+    background: var(--card-background-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--color);
+}
+
+/* Letters Grid */
+.letters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 0.5rem;
+}
+
+.letter-button {
+    text-align: center;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+.letter-button:hover {
+    background: var(--primary) !important;
+    color: white !important;
+}
+
+/* Expressions Grid */
+.expressions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.expression-card {
+    border-left: 4px solid var(--primary);
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.expression-word {
+    font-weight: bold;
+    font-size: 1.125rem;
+    color: var(--color);
+    margin-bottom: 0.25rem;
+}
+
+.expression-translation {
+    color: var(--muted-color);
+    margin-bottom: 0.5rem;
+}
+
+.expression-example {
+    color: var(--muted-color);
+    font-style: italic;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* Table Styles */
+.expressions-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.expressions-table th {
+    background: var(--muted-color);
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+.expressions-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--muted-color);
+    vertical-align: top;
+}
+
+.expressions-table tr:hover {
+    background: var(--card-background-color);
+}
+
+/* Links */
+.more-link {
+    color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin-top: 1.5rem;
+}
+
+.more-link:hover {
+    opacity: 0.8;
+}
+
+/* Buttons */
+.button-hover:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .expressions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .letters-grid {
+        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .expressions-table {
+        font-size: 0.875rem;
+    }
+    
+    .expressions-table th,
+    .expressions-table td {
+        padding: 0.75rem 0.5rem;
+    }
+}
+/* Active State for Letter Filter */
+.letter-button.active {
+    background: var(--primary) !important;
+    color: white !important;
+}
+
+/* Table Improvements */
+.expressions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.expressions-table th {
+    background: var(--muted-color);
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid var(--primary);
+}
+
+.expressions-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--muted-color);
+    vertical-align: top;
+}
+
+.expressions-table tr:hover {
+    background: color-mix(in srgb, var(--primary) 5%, transparent);
+}
+
+.expressions-table tr:nth-child(even) {
+    background: color-mix(in srgb, var(--muted-color) 10%, transparent);
+}
+
+.expressions-table tr:nth-child(even):hover {
+    background: color-mix(in srgb, var(--primary) 8%, transparent);
+}
+ul#kasten {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Infinite Scroll Styles */
+#loading-indicator {
+    background: var(--card-background-color);
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--muted-color);
+    border-top: 2px solid var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#end-of-content {
+    background: color-mix(in srgb, var(--primary) 10%, transparent);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+}
+
+/* Smooth animations for new content */
+.expressions-table tbody tr {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Custom CSS für Logout-Button im Dropdown */
+.dropdown button[type="submit"] {
+    background: none !important;
+    border: none !important;
+    color: inherit !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    text-align: left !important;
+    padding: 0.5rem 1rem !important;
+    font: inherit !important;
+}
+
+.dropdown button[type="submit"]:hover {
+    background: var(--secondary) !important;
+}
+
+/* Optional: Styling für aktiven Benutzer */
+.user-info {
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-right: 1rem;
+}   

@@ -1,0 +1,13 @@
+@charset "utf-8";
+@import "../../public/css/custom.css";
+
+/* Minimal app.css — required by Vite entry in `vite.config.js`.
+   The project already ships a compiled stylesheet at `public/css/custom.css`.
+   Keep this file minimal to satisfy the build pipeline; extend it if you
+   want to author source CSS here in future. */
+
+/* Basic fallback variables to ensure build succeeds */
+:root {
+    --primary: #4a90e2;
+    --secondary: #50e3c2;
+}
