@@ -77,9 +77,6 @@
                             </ul>
                         </details>
                     </li>
-                @else
-                    <!-- Login Link - nur wenn nicht eingeloggt -->
-                    <li><a href="{{ route('login') }}">Login</a></li>
                 @endauth
             </ul>
         </div>
@@ -103,7 +100,11 @@
     </main>
 
     <footer class="container" style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--muted-color);">
-        <small>Wäller Platt &copy; {{ date('Y') }} ~ <a href="{{ route('impressum') }}">Impressum</a> ~ <a href="{{ route('datenschutz') }}">Datenschutz</a> ~ <a href="https://de.wikipedia.org/wiki/W%C3%A4ller_Platt" target="_blank">Wällerplatt - Wikipedia</a></small>
+        <small>Wäller Platt &copy; {{ date('Y') }} ~ <a href="{{ route('impressum') }}">Impressum</a> ~ <a href="{{ route('datenschutz') }}">Datenschutz</a> ~ <a href="https://de.wikipedia.org/wiki/W%C3%A4ller_Platt" target="_blank">Wällerplatt - Wikipedia</a>
+        @guest
+            ~ <a href="{{ route('login') }}">Login</a>
+        @endguest
+        </small>
     </footer>
 </body>
 </html>
